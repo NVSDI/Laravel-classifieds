@@ -1,0 +1,8 @@
+You can run php artisan migrate:rollback command and if a table was created in a last batch, it will be deleted (if down() method of a migration was written correctly, of course).
+
+If not, you can create a new migration and delete table with drop() method:
+
+Schema::drop('users');
+Or:
+
+Schema::dropIfExists('users');
